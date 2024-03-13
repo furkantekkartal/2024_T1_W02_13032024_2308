@@ -1,20 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package pkg2024_t1_w02_13032024_2308;
 
-/**
- *
- * @author Furky_n_Betty
- */
 public class Main {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Employee first = new Employee("Scott", "Smith", "M4352");
+        CommissionEmployee second = new CommissionEmployee("Lis", "Paul","M3456", 5000, 0.25);
+        System.out.println(second);
+        second.setGrossSales(4500);
+        System.out.println(second);
+             
     }
     
 }

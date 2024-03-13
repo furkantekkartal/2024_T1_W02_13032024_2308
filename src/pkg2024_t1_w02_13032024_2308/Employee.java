@@ -5,18 +5,18 @@ package pkg2024_t1_w02_13032024_2308;
  * @author Furky_n_Betty
  */
 public class Employee {
-    private final String FIRST_NAME;
-    private final String LAST_NAME;
-    private final String SOCIAL_SECURITY_NUMBER;
+    protected final String FIRST_NAME;
+    protected final String LAST_NAME;
+    protected final String SOCIAL_SECURITY_NUMBER;
 
     public Employee(){
         this ("undefined", "undefined", "");
     }
     
-    public Employee(String firstName, String lastName, String socialsecurity){
+    public Employee(String firstName, String lastName, String socialSecurity){
         this.FIRST_NAME = firstName;
         this.LAST_NAME = lastName;
-        this.SOCIAL_SECURITY_NUMBER = socialsecurity;
+        this.SOCIAL_SECURITY_NUMBER = socialSecurity;
     }
     
     public Employee(Employee another){
@@ -25,7 +25,7 @@ public class Employee {
     
     @Override
     public String toString(){
-        return String.format("%s %s %s",FIRST_NAME,LAST_NAME,SOCIAL_SECURITY_NUMBER);
+        return String.format("%s %s %s",this.getFirstName(),this.getLastName(),this.getSocialSecurityNumber());
     }
     
     public String getFirstName(){
@@ -35,5 +35,8 @@ public class Employee {
     public String getLastName(){
         return LAST_NAME;
     }
-
+    
+    public String getSocialSecurityNumber(){
+        return SOCIAL_SECURITY_NUMBER;
+    }
 }
